@@ -1,0 +1,55 @@
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+The IOKit Interface Generator file that declares the driver's methods.
+*/
+
+#ifndef NullDriver_h
+#define NullDriver_h
+
+#include <Availability.h>
+#include <DriverKit/IOUserClient.iig>
+#include <DriverKit/IOTimerDispatchSource.iig>
+
+class NullDriver: public IOUserClient
+{
+protected:
+    // These are the standard methods that use an insecure process to respond to external messages.
+    kern_return_t HandleExternalScalar(IOUserClientMethodArguments* arguments) LOCALONLY;
+    kern_return_t HandleExternalStruct(IOUserClientMethodArguments* arguments) LOCALONLY;
+
+    // These are the static functions called by our IOUserClientMethodDispatch in our more secure means of checking external messages.
+    static kern_return_t StaticHandleExternalCheckedScalar(OSObject* target, void* reference, IOUserClientMethodArguments* arguments) LOCALONLY;
+    static kern_return_t StaticHandleExternalCheckedStruct(OSObject* target, void* reference, IOUserClientMethodArguments* arguments) LOCALONLY;
+
+    // There are the local functions called from the static callbacks of the same name.
+    kern_return_t HandleExternalCheckedScalar(void* reference, IOUserClientMethodArguments* arguments) LOCALONLY;
+    kern_return_t HandleExternalCheckedStruct(void* reference, IOUserClientMethodArguments* arguments) LOCALONLY;
+
+    // Provide a means to register our async callback with the dext.
+    static kern_return_t StaticRegisterAsyncCallback(OSObject* target, void* reference, IOUserClientMethodArguments* arguments) LOCALONLY;
+    kern_return_t RegisterAsyncCallback(void* reference, IOUserClientMethodArguments* arguments) LOCALONLY;
+
+    // This flow shows what it's like to make a request that fires off an asynchronous action and then makes a callback.
+    // While a driver typically uses the callback from the method that assigns the callback, it's also equally viable to retain the callback and re-use it.
+    // If appropriate, a single function could even call the callback multiple times.
+    static kern_return_t StaticHandleAsyncRequest(OSObject* target, void* reference, IOUserClientMethodArguments* arguments) LOCALONLY;
+    kern_return_t HandleAsyncRequest(void* reference, IOUserClientMethodArguments* arguments) LOCALONLY;
+
+    void PrintExtendedErrorInfo(kern_return_t ret) LOCALONLY;
+
+public:
+    virtual bool init(void) override;
+    virtual kern_return_t Start(IOService* provider) override;
+    virtual kern_return_t Stop(IOService* provider) override;
+    virtual void free(void) override;
+
+    virtual kern_return_t NewUserClient(uint32_t type, IOUserClient** userClient) override;
+    virtual kern_return_t ExternalMethod(uint64_t selector, IOUserClientMethodArguments* arguments, const IOUserClientMethodDispatch* dispatch, OSObject* target, void* reference) override;
+
+    // This function is called to simulate a device taking some time to complete an action and calling back the dext asynchronously.
+    virtual void SimulatedAsyncEvent(OSAction* action, uint64_t time) TYPE(IOTimerDispatchSource::TimerOccurred);
+};
+
+#endif /* NullDriver_h */

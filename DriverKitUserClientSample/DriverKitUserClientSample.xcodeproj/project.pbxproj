@@ -1,0 +1,695 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AA5072F2AD50CE7005A9886 /* DriverLoadingView+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5072E2AD50CE7005A9886 /* DriverLoadingView+iOS.swift */; platformFilter = ios; };
+		1AA507312AD50DBC005A9886 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1AA507302AD50DBC005A9886 /* Settings.bundle */; };
+		52DBF5EB25E5ECF600CCE289 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52DBF5EA25E5ECF600CCE289 /* main.cpp */; };
+		52DBF5F025E5EDFE00CCE289 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6286B478252E3F4900A9A513 /* CoreFoundation.framework */; };
+		52DBF5F125E5EE0600CCE289 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629413EB2518F5AB00478C2B /* IOKit.framework */; };
+		627CF0CA2538C394009E1911 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 627CF0C92538C394009E1911 /* LICENSE.txt */; };
+		629413C52518E5D900478C2B /* DriverLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629413C42518E5D900478C2B /* DriverLoadingView.swift */; platformFilters = (macos, ); };
+		629413C72518E61500478C2B /* DriverLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629413C62518E61500478C2B /* DriverLoadingViewModel.swift */; platformFilters = (macos, ); };
+		62A475512515566500B50752 /* DriverKitSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A475502515566500B50752 /* DriverKitSampleApp.swift */; };
+		62A475552515566600B50752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A475542515566600B50752 /* Assets.xcassets */; };
+		62A475582515566600B50752 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A475572515566600B50752 /* Preview Assets.xcassets */; };
+		62A475662515567200B50752 /* DriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A475652515567200B50752 /* DriverKit.framework */; };
+		62A475692515567200B50752 /* NullDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62A475682515567200B50752 /* NullDriver.cpp */; };
+		62A4756B2515567200B50752 /* NullDriver.iig in Sources */ = {isa = PBXBuildFile; fileRef = 62A4756A2515567200B50752 /* NullDriver.iig */; };
+		62A475702515567200B50752 /* com.gigabitelabs.user-client.app.driver.dext in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 62A475632515567200B50752 /* com.gigabitelabs.user-client.app.driver.dext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		62A4756E2515567200B50752 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62A4752F2515563B00B50752 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62A475622515567200B50752;
+			remoteInfo = MyDext;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		62A475742515567200B50752 /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				62A475702515567200B50752 /* com.gigabitelabs.user-client.app.driver.dext in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1AA5072E2AD50CE7005A9886 /* DriverLoadingView+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DriverLoadingView+iOS.swift"; sourceTree = "<group>"; };
+		1AA507302AD50DBC005A9886 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		52DBF5DC25E5ECF400CCE289 /* CppUserClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CppUserClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52DBF5E925E5ECF600CCE289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52DBF5EA25E5ECF600CCE289 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		52DBF5EC25E5ECF600CCE289 /* CppUserClient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CppUserClient.entitlements; sourceTree = "<group>"; };
+		627CF0C92538C394009E1911 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE/LICENSE.txt; sourceTree = "<group>"; };
+		6286B478252E3F4900A9A513 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		629413C42518E5D900478C2B /* DriverLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverLoadingView.swift; sourceTree = "<group>"; };
+		629413C62518E61500478C2B /* DriverLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverLoadingViewModel.swift; sourceTree = "<group>"; };
+		629413EB2518F5AB00478C2B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		62A4754E2515566500B50752 /* DriverKitSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriverKitSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62A475502515566500B50752 /* DriverKitSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverKitSampleApp.swift; sourceTree = "<group>"; };
+		62A475542515566600B50752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		62A475572515566600B50752 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		62A475592515566600B50752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62A4755A2515566600B50752 /* DriverKitSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DriverKitSampleApp.entitlements; sourceTree = "<group>"; };
+		62A475632515567200B50752 /* com.gigabitelabs.user-client.app.driver.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = "com.gigabitelabs.user-client.app.driver.dext"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62A475652515567200B50752 /* DriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DriverKit.framework; path = System/Library/Frameworks/DriverKit.framework; sourceTree = SDKROOT; };
+		62A475682515567200B50752 /* NullDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NullDriver.cpp; sourceTree = "<group>"; };
+		62A4756A2515567200B50752 /* NullDriver.iig */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.iig; path = NullDriver.iig; sourceTree = "<group>"; };
+		62A4756C2515567200B50752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62A4756D2515567200B50752 /* NullDriver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NullDriver.entitlements; sourceTree = "<group>"; };
+		9175AE33DAFC6077E136FC22 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E2E30052AEB1AEE49EC73B0E /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F32C00003CD45082E71156D7 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = ../Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52DBF5D925E5ECF400CCE289 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52DBF5F025E5EDFE00CCE289 /* CoreFoundation.framework in Frameworks */,
+				52DBF5F125E5EE0600CCE289 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A4754B2515566500B50752 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A475602515567200B50752 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62A475662515567200B50752 /* DriverKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52DBF5DD25E5ECF400CCE289 /* CppUserClient */ = {
+			isa = PBXGroup;
+			children = (
+				52DBF5E925E5ECF600CCE289 /* Info.plist */,
+				52DBF5EA25E5ECF600CCE289 /* main.cpp */,
+				52DBF5EC25E5ECF600CCE289 /* CppUserClient.entitlements */,
+			);
+			path = CppUserClient;
+			sourceTree = "<group>";
+		};
+		62013B6D2536030E00685CB5 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				627CF0C92538C394009E1911 /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			sourceTree = "<group>";
+		};
+		62A4752E2515563B00B50752 = {
+			isa = PBXGroup;
+			children = (
+				9175AE33DAFC6077E136FC22 /* README.md */,
+				62013B6D2536030E00685CB5 /* LICENSE */,
+				62A4754F2515566500B50752 /* DriverKitSampleApp */,
+				62A475672515567200B50752 /* NullDriver */,
+				52DBF5DD25E5ECF400CCE289 /* CppUserClient */,
+				62A475642515567200B50752 /* Frameworks */,
+				62A475382515563B00B50752 /* Products */,
+				936CF80E0F13CF1DD1E9DEF6 /* Configuration */,
+				CF72AC1E75D0526FDE047367 /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		62A475382515563B00B50752 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62A4754E2515566500B50752 /* DriverKitSampleApp.app */,
+				62A475632515567200B50752 /* com.gigabitelabs.user-client.app.driver.dext */,
+				52DBF5DC25E5ECF400CCE289 /* CppUserClient.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62A4754F2515566500B50752 /* DriverKitSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				62A475502515566500B50752 /* DriverKitSampleApp.swift */,
+				629413C42518E5D900478C2B /* DriverLoadingView.swift */,
+				629413C62518E61500478C2B /* DriverLoadingViewModel.swift */,
+				62A475542515566600B50752 /* Assets.xcassets */,
+				62A475592515566600B50752 /* Info.plist */,
+				62A4755A2515566600B50752 /* DriverKitSampleApp.entitlements */,
+				62A475562515566600B50752 /* Preview Content */,
+				1AA5072E2AD50CE7005A9886 /* DriverLoadingView+iOS.swift */,
+				1AA507302AD50DBC005A9886 /* Settings.bundle */,
+			);
+			path = DriverKitSampleApp;
+			sourceTree = "<group>";
+		};
+		62A475562515566600B50752 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				62A475572515566600B50752 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		62A475642515567200B50752 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6286B478252E3F4900A9A513 /* CoreFoundation.framework */,
+				629413EB2518F5AB00478C2B /* IOKit.framework */,
+				62A475652515567200B50752 /* DriverKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62A475672515567200B50752 /* NullDriver */ = {
+			isa = PBXGroup;
+			children = (
+				62A475682515567200B50752 /* NullDriver.cpp */,
+				62A4756A2515567200B50752 /* NullDriver.iig */,
+				62A4756C2515567200B50752 /* Info.plist */,
+				62A4756D2515567200B50752 /* NullDriver.entitlements */,
+			);
+			path = NullDriver;
+			sourceTree = "<group>";
+		};
+		936CF80E0F13CF1DD1E9DEF6 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F32C00003CD45082E71156D7 /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		CF72AC1E75D0526FDE047367 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				E2E30052AEB1AEE49EC73B0E /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = ../LICENSE;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		62A4755E2515567200B50752 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		52DBF5DB25E5ECF400CCE289 /* CppUserClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52DBF5ED25E5ECF600CCE289 /* Build configuration list for PBXNativeTarget "CppUserClient" */;
+			buildPhases = (
+				52DBF5D825E5ECF400CCE289 /* Sources */,
+				52DBF5D925E5ECF400CCE289 /* Frameworks */,
+				52DBF5DA25E5ECF400CCE289 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CppUserClient;
+			productName = CppUserClient;
+			productReference = 52DBF5DC25E5ECF400CCE289 /* CppUserClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		62A4754D2515566500B50752 /* DriverKitSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62A4755B2515566600B50752 /* Build configuration list for PBXNativeTarget "DriverKitSampleApp" */;
+			buildPhases = (
+				62A4754A2515566500B50752 /* Sources */,
+				62A4754B2515566500B50752 /* Frameworks */,
+				62A4754C2515566500B50752 /* Resources */,
+				62A475742515567200B50752 /* Embed System Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62A4756F2515567200B50752 /* PBXTargetDependency */,
+			);
+			name = DriverKitSampleApp;
+			productName = MyDriver;
+			productReference = 62A4754E2515566500B50752 /* DriverKitSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		62A475622515567200B50752 /* NullDriver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62A475712515567200B50752 /* Build configuration list for PBXNativeTarget "NullDriver" */;
+			buildPhases = (
+				62A4755E2515567200B50752 /* Headers */,
+				62A4755F2515567200B50752 /* Sources */,
+				62A475602515567200B50752 /* Frameworks */,
+				62A475612515567200B50752 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NullDriver;
+			productName = MyDext;
+			productReference = 62A475632515567200B50752 /* com.gigabitelabs.user-client.app.driver.dext */;
+			productType = "com.apple.product-type.driver-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62A4752F2515563B00B50752 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Latest;
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1220;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					52DBF5DB25E5ECF400CCE289 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					62A4754D2515566500B50752 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					62A475622515567200B50752 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 62A475322515563B00B50752 /* Build configuration list for PBXProject "DriverKitUserClientSample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 62A4752E2515563B00B50752;
+			productRefGroup = 62A475382515563B00B50752 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62A4754D2515566500B50752 /* DriverKitSampleApp */,
+				62A475622515567200B50752 /* NullDriver */,
+				52DBF5DB25E5ECF400CCE289 /* CppUserClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52DBF5DA25E5ECF400CCE289 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A4754C2515566500B50752 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AA507312AD50DBC005A9886 /* Settings.bundle in Resources */,
+				627CF0CA2538C394009E1911 /* LICENSE.txt in Resources */,
+				62A475582515566600B50752 /* Preview Assets.xcassets in Resources */,
+				62A475552515566600B50752 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A475612515567200B50752 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52DBF5D825E5ECF400CCE289 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52DBF5EB25E5ECF600CCE289 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A4754A2515566500B50752 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				629413C72518E61500478C2B /* DriverLoadingViewModel.swift in Sources */,
+				1AA5072F2AD50CE7005A9886 /* DriverLoadingView+iOS.swift in Sources */,
+				629413C52518E5D900478C2B /* DriverLoadingView.swift in Sources */,
+				62A475512515566500B50752 /* DriverKitSampleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A4755F2515567200B50752 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62A4756B2515567200B50752 /* NullDriver.iig in Sources */,
+				62A475692515567200B50752 /* NullDriver.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		62A4756F2515567200B50752 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62A475622515567200B50752 /* NullDriver */;
+			targetProxy = 62A4756E2515567200B50752 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		52DBF5EE25E5ECF600CCE289 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F32C00003CD45082E71156D7 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CppUserClient/CppUserClient.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QYU2SZHRLR;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = CppUserClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gigabitelabs.user-client.client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		52DBF5EF25E5ECF600CCE289 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F32C00003CD45082E71156D7 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CppUserClient/CppUserClient.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QYU2SZHRLR;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = CppUserClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gigabitelabs.user-client.client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+		62A475452515563C00B50752 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F32C00003CD45082E71156D7 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		62A475462515563C00B50752 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F32C00003CD45082E71156D7 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		62A4755C2515566600B50752 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F32C00003CD45082E71156D7 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DriverKitSampleApp/DriverKitSampleApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"DriverKitSampleApp/Preview Content\"";
+				DEVELOPMENT_TEAM = QYU2SZHRLR;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DriverKitSampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gigabitelabs.user-client.app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		62A4755D2515566600B50752 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F32C00003CD45082E71156D7 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DriverKitSampleApp/DriverKitSampleApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"DriverKitSampleApp/Preview Content\"";
+				DEVELOPMENT_TEAM = QYU2SZHRLR;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DriverKitSampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gigabitelabs.user-client.app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		62A475722515567200B50752 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F32C00003CD45082E71156D7 /* SampleCode.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = NullDriver/NullDriver.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QYU2SZHRLR;
+				DRIVERKIT_DEPLOYMENT_TARGET = 20.0;
+				INFOPLIST_FILE = NullDriver/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gigabitelabs.user-client.app.driver";
+				PRODUCT_NAME = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = driverkit;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		62A475732515567200B50752 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F32C00003CD45082E71156D7 /* SampleCode.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = NullDriver/NullDriver.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QYU2SZHRLR;
+				DRIVERKIT_DEPLOYMENT_TARGET = 20.0;
+				INFOPLIST_FILE = NullDriver/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gigabitelabs.user-client.app.driver";
+				PRODUCT_NAME = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = driverkit;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52DBF5ED25E5ECF600CCE289 /* Build configuration list for PBXNativeTarget "CppUserClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52DBF5EE25E5ECF600CCE289 /* Debug */,
+				52DBF5EF25E5ECF600CCE289 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62A475322515563B00B50752 /* Build configuration list for PBXProject "DriverKitUserClientSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62A475452515563C00B50752 /* Debug */,
+				62A475462515563C00B50752 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62A4755B2515566600B50752 /* Build configuration list for PBXNativeTarget "DriverKitSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62A4755C2515566600B50752 /* Debug */,
+				62A4755D2515566600B50752 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62A475712515567200B50752 /* Build configuration list for PBXNativeTarget "NullDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62A475722515567200B50752 /* Debug */,
+				62A475732515567200B50752 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62A4752F2515563B00B50752 /* Project object */;
+}
