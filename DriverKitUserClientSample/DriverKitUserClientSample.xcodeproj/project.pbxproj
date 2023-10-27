@@ -21,7 +21,7 @@
 		62A475662515567200B50752 /* DriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A475652515567200B50752 /* DriverKit.framework */; };
 		62A475692515567200B50752 /* NullDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62A475682515567200B50752 /* NullDriver.cpp */; };
 		62A4756B2515567200B50752 /* NullDriver.iig in Sources */ = {isa = PBXBuildFile; fileRef = 62A4756A2515567200B50752 /* NullDriver.iig */; };
-		62A475702515567200B50752 /* com.gigabitelabs.user-client.app.driver.dext in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 62A475632515567200B50752 /* com.gigabitelabs.user-client.app.driver.dext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		62A475702515567200B50752 /* com.gigabitelabs.userclient.app.driver.dext in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 62A475632515567200B50752 /* com.gigabitelabs.userclient.app.driver.dext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
-				62A475702515567200B50752 /* com.gigabitelabs.user-client.app.driver.dext in Embed System Extensions */,
+				62A475702515567200B50752 /* com.gigabitelabs.userclient.app.driver.dext in Embed System Extensions */,
 			);
 			name = "Embed System Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,7 +66,7 @@
 		62A475572515566600B50752 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		62A475592515566600B50752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62A4755A2515566600B50752 /* DriverKitSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DriverKitSampleApp.entitlements; sourceTree = "<group>"; };
-		62A475632515567200B50752 /* com.gigabitelabs.user-client.app.driver.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = "com.gigabitelabs.user-client.app.driver.dext"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62A475632515567200B50752 /* com.gigabitelabs.userclient.app.driver.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = com.gigabitelabs.userclient.app.driver.dext; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A475652515567200B50752 /* DriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DriverKit.framework; path = System/Library/Frameworks/DriverKit.framework; sourceTree = SDKROOT; };
 		62A475682515567200B50752 /* NullDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NullDriver.cpp; sourceTree = "<group>"; };
 		62A4756A2515567200B50752 /* NullDriver.iig */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.iig; path = NullDriver.iig; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				62A4754E2515566500B50752 /* DriverKitSampleApp.app */,
-				62A475632515567200B50752 /* com.gigabitelabs.user-client.app.driver.dext */,
+				62A475632515567200B50752 /* com.gigabitelabs.userclient.app.driver.dext */,
 				52DBF5DC25E5ECF400CCE289 /* CppUserClient.app */,
 			);
 			name = Products;
@@ -274,7 +274,7 @@
 			);
 			name = NullDriver;
 			productName = MyDext;
-			productReference = 62A475632515567200B50752 /* com.gigabitelabs.user-client.app.driver.dext */;
+			productReference = 62A475632515567200B50752 /* com.gigabitelabs.userclient.app.driver.dext */;
 			productType = "com.apple.product-type.driver-extension";
 		};
 /* End PBXNativeTarget section */
@@ -404,7 +404,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gigabitelabs.user-client.client";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gigabitelabs.userclient.client;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -427,7 +427,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gigabitelabs.user-client.client";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gigabitelabs.userclient.client;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -570,13 +570,13 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gigabitelabs.user-client.app";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gigabitelabs.userclient.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -600,13 +600,13 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gigabitelabs.user-client.app";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gigabitelabs.userclient.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -621,7 +621,7 @@
 				DEVELOPMENT_TEAM = QYU2SZHRLR;
 				DRIVERKIT_DEPLOYMENT_TARGET = 20.0;
 				INFOPLIST_FILE = NullDriver/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gigabitelabs.user-client.app.driver";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gigabitelabs.userclient.app.driver;
 				PRODUCT_NAME = "$(inherited)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
@@ -641,7 +641,7 @@
 				DEVELOPMENT_TEAM = QYU2SZHRLR;
 				DRIVERKIT_DEPLOYMENT_TARGET = 20.0;
 				INFOPLIST_FILE = NullDriver/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gigabitelabs.user-client.app.driver";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gigabitelabs.userclient.app.driver;
 				PRODUCT_NAME = "$(inherited)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;

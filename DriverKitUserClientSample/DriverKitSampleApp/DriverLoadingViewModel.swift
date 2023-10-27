@@ -75,7 +75,7 @@ class DriverLoadingViewModel: NSObject {
     // Your dext may not start in unloaded state every time. Add logic or states to check this.
     @Published private var state: DriverLoadingStateMachine.State = .unloaded
 
-    private let dextIdentifier: String = "com.gigabitelabs.user-client.app.driver"
+    private let dextIdentifier: String = "com.gigabitelabs.userclient.app.driver"
 
     public var dextLoadingState: String {
         switch state {

@@ -16,11 +16,11 @@
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
-			<string>Name</string>
+			<string>User Input Allowed:</string>
 			<key>Key</key>
 			<string>name_preference</string>
 			<key>DefaultValue</key>
-			<string></string>
+			<string>default value!</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>KeyboardType</key>
@@ -34,7 +34,7 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Enabled</string>
+			<string>Enable something?</string>
 			<key>Key</key>
 			<string>enabled_preference</string>
 			<key>DefaultValue</key>

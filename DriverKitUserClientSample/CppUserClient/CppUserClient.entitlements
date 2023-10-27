@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.developer.driverkit.userclient-access</key>
 	<array>
-		<string>com.gigabitelabs.user-client.app.driver</string>
+		<string>com.gigabitelabs.userclient.app.driver</string>
 	</array>
 </dict>
 </plist>
