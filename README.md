@@ -19,7 +19,7 @@ This project was adapted from Apple's WWDC [sample project](https://developer.ap
 
 ### System Extension Utils
 
-- Check if SIP is enabled or disabled (disable if you don't have a DriverKit entitlement Apple)
+- Check if SIP is enabled or disabled (disable if you don't have a DriverKit entitlement from Apple)
     - `csrutil status`
 
 - Enable developer mode:
