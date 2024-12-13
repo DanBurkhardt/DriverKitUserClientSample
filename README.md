@@ -38,16 +38,18 @@ This project was adapted from Apple's WWDC [sample project](https://developer.ap
 ### Tips
 
 - Keep in mind that the published Example Projects are super out of date (as of at least Oct 2023).
+
 - Highly recommend that if you follow the example / guide "[Connecting a network driver](https://developer.apple.com/documentation/networkingdriverkit/connecting_a_network_driver?language=objc)" that you do NOT do any of the manual steps related to registering and generating a provisioning profile
   - It WILL work if you do it but you do not need to (the documentation is outdated) 
   - Since Xcode 14, Xcode is able to do this automatically for DriverKit, just as it would for any other type of provisioning profile
-    - BIG side note / tip for iPadOS drivers:
-        - If you plan to embed your DriverKit Driver in an iPadOS app, your bundle naming convention MUST follow this exmple, or it will not compile:
-          - Application target bundle id: `com.reversedomainscheme.exampleapp`
-          - DriverKit target bundle id: `com.reversedomainscheme.exampleapp.driver` 
-            - (notice that the app target's bundle ID is used as a prefix for the driver target's bundle id)
+
+- BIG side note / tip for iPadOS drivers:
+    - If you plan to embed your DriverKit Driver in an iPadOS app, your bundle naming convention MUST follow this exmple, or it will not compile:
+        - Application target bundle id: `com.reversedomainscheme.exampleapp`
+        - DriverKit target bundle id: `com.reversedomainscheme.exampleapp.driver` 
+        - (notice that the app target's bundle ID is used as a prefix for the driver target's bundle id)
           
-        - TL;DR: the driverkit bundle ID is required to use the application bundle id as a prefix. 
+    - TL;DR: the driverkit bundle ID is required to use the application bundle id as a prefix. 
             - Note: You don't have to use ".driver" as a suffix, you can use whatever you want to call it, just remember that your driver will be referred to by the driver bundle id in future operations.
 
 ### Source project from Apple:
